@@ -10,6 +10,11 @@ Full-Stack application that manipulates .sdf files to generate molecules in svg 
 - ```molecule.i``` file used to interact with swig toolkit to compile scripted languages together
 - ```scripts.js``` JavaScript to implement event listeners and HTTP requests via AJAX to interact with server
 
+# Requirements
+
+1. Download python on your local machine https://www.python.org/downloads/
+2. Download Swig on your local machine https://open-box.readthedocs.io/en/latest/installation/install_swig.html
+
 # How to run
 
 1. Clone the repo locally
