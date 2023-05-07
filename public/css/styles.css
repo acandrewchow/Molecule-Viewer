@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+}
+
+
+.error {
+  border: 1px solid red;
+  color: red;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.success {
+  border: 1px solid green;
+  color: green;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px 0;
+}
+
+.default {
+  border: 1px solid black;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px 0;
+
+}
+
+/* Header */
+#header {
+  color: #6bf1db;
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  padding: 30px 0;
+  top: 0;
+  z-index: 999;
+  transition: 0.3s linear;
+}
+
+#header .inner-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main-title {
+  height: 100vh;
+  min-height: 500px;
+  text-align: center;
+  background: #407b6f;
+  color: white;
+  font-size: 30px;
+  background: url(/public/images/header.jpg) no-repeat center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(/public/images/header.jpg);
+  background-size: cover;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: rgb(0, 255, 255);
+}
+
+.title, .rotate-title, .table-title, .add-element-title, .rotate-title {
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.inner-width {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 40px;
+}
+#main-title .inner-width {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#wrapper  {
+  background-color: rgb(255, 255, 255);
+  padding: 50px 50px 50px 50px;
+}
+
+.upload {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.upload-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  width: 175px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+.upload-button:hover {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.upload label {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  width: 175px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.upload label:hover {
+  background-color: #70cf74;
+}
+
+label {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 12px;
+  padding: 7.5px;
+  font-family: sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1px;
+  display: inline-block;
+}
+
+.add-element-form, .rotate-molecule-form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align:center;
+  gap: 10px;
+  border: 2px solid #000000;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.add-element-form label, .rotate-molecule-form label {
+  font-size: 12px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-element-form input[type="text"],  .rotate-molecule-form input[type="text"] {
+  width: 10%;
+  height: 30px;
+  padding: 5px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+.add-element-form button[type="submit"], .rotate-molecule-form button[type="submit"] {
+  width: 150px;
+  height: 40px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+::-webkit-input-placeholder {
+  font-size: 12px; /* Google Chrome */
+}
+
+#particle-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.element-button, .radius-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 15px 15px 15px;
+}
+
+.add-element-button,
+.rotate-molecule-button,
+.reset-molecule-button {
+  background: #4caf50;
+  margin-right: 5px;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  width: 175px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+
+
+/* elements table */
+
+.elements-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.elements-table th,
+.elements-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.elements-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.elements-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.elements-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.remove-button {
+  background-color: #f44336;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.remove-button:hover {
+  background-color: #d32f2f;
+}
+
+
+#select-molecule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
+#molecules {
+  padding: 5px;
+  z-index: 1;
+}
+
+.success-element, .rotate-message {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  padding: 15px 15px 15px 15px;
+  
+}
+
+.svg-molecule-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 25px;
+  font-size: 36px;
+  border: 4px solid #000000;
+}
+
+#svg-display {
+  background-color: #f2f2f2;
+  border: 5px solid #000000;
+  padding: 15px 15px 15px 15px;
+  margin-top: 50px;
+}
+

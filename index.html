@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MolView</title>
+    <link rel="stylesheet" href="./public/css/styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="./public/js/scripts.js"></script>
+  </head>
+
+  <!-- Main Header Section -->
+  <body>
+    <section id="header">
+      <div class="inner-width">
+        <h1>Andrew Chow</h1>
+      </div>
+    </section>
+
+    <section id="main-title">
+      <div class="inner-width">
+        <div class="content">
+          <h1>Molecule Viewer</h1>
+          <span class="auto-type"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upload File Button -->
+    <section id="upload-section">
+      <div class="upload">
+        <div class="title">Upload Molecule</div>
+        <form id="upload-form">
+          <label for="sdf_file">Choose File</label>
+          <input type="file" id="sdf_file" name="filename" hidden />
+          <button type="submit" class="upload-button">Upload</button>
+        </form>
+        <span class="file-chosen">No file chosen</span>
+      </div>
+    </section>
+
+    <!-- Select a molecule-->
+    <section id="select-molecule">
+      <div class="title">Display Molecule</div>
+      <select name="molecules" id="molecules">
+        <optgroup label="Molecules">
+          <option value="">Choose Molecule</option>
+        </optgroup>
+      </select>
+    </section>
+
+    <!-- Add / Remove Element Text Form -->
+    <section id="wrapper">
+      <section id="add-element">
+        <div class="add-element-title">Add Element</div>
+        <form class="add-element-form">
+          <label for="element-number">Element Number</label>
+          <input
+            type="text"
+            id="element-number"
+            name="element-number"
+            placeholder="i.e. 1"
+            required
+          /><br />
+
+          <label for="element-code">Element Code</label>
+          <input
+            type="text"
+            id="element-code"
+            name="element-code"
+            placeholder="i.e. H"
+            required
+          /><br />
+
+          <label for="element-name">Element Name</label>
+          <input
+            type="text"
+            id="element-name"
+            name="element-name"
+            placeholder="i.e. Hydrogen"
+            required
+          /><br />
+
+          <label for="color-value-1">Colour Value 1</label>
+          <input
+            type="text"
+            id="color-value-1"
+            name="color-value-1"
+            placeholder="i.e. FFFFFF"
+            required
+          /><br />
+
+          <label for="color-value-2">Colour Value 2</label>
+          <input
+            type="text"
+            id="color-value-2"
+            name="color-value-2"
+            placeholder="i.e. FFFFFF"
+            required
+          /><br />
+
+          <label for="color-value-3">Colour Value 3</label>
+          <input
+            type="text"
+            id="color-value-3"
+            name="color-value-3"
+            placeholder="i.e. FFFFFF"
+            required
+          /><br />
+
+          <label for="element-radius">Element Radius</label>
+          <input
+            type="text"
+            id="element-radius"
+            name="element-radius"
+            placeholder="i.e. 40"
+            required
+          /><br />
+        </form>
+        <div class="element-button">
+          <button type="submit" class="add-element-button">Add Element</button>
+        </div>
+        <div class="success-element"></div>
+      </section>
+
+      <section id="elements-section">
+        <div class="table-title">Elements Table</div>
+        <table class="elements-table">
+          <thead>
+            <tr>
+              <th>Element No</th>
+              <th>Element Code</th>
+              <th>Element Name</th>
+              <th>Colour 1</th>
+              <th>Colour 2</th>
+              <th>Colour 3</th>
+              <th>Radius</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <div class="elements-container"></div>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="rotate-container">
+        <div class="rotate-title">Rotate Molecule</div>
+        <form class="rotate-molecule-form">
+          <label for="rotate-x">Rotate X</label>
+          <input
+            type="text"
+            id="rotate-x"
+            name="rotate-x"
+            placeholder="i.e. 20"
+          /><br />
+          <label for="rotate-y">Rotate Y</label>
+          <input
+            type="text"
+            id="rotate-y"
+            name="rotate-y"
+            placeholder="i.e. 10"
+          /><br />
+          <label for="rotate-z">Rotate Z</label>
+          <input
+            type="text"
+            id="rotate-z"
+            name="rotate-z"
+            placeholder="i.e. 10"
+          /><br />
+        </form>
+        <div class="radius-button">
+          <button type="submit" class="rotate-molecule-button">
+            Rotate Molecule
+          </button>
+          <button type="submit" class="reset-molecule-button">
+            Reset Molecule
+          </button>
+        </div>
+        <div class="rotate-message"></div>
+      </section>
+
+      <!-- SVG Display Area-->
+      <section id="svg-display">
+        <h1 class="svg-molecule-name">No Molecule Selected</h1>
+        <div class="svg-area"></div>
+      </section>
+    </section>
+    <!-- end of wrapper-->
+  </body>
+</html>
